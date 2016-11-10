@@ -6,12 +6,20 @@
     android:layout_height="match_parent"
     android:gravity="center_vertical"
     >
+    <TextView android:id="@+id/contactName"
+        android:textStyle="bold"
+        android:text="Username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <EditText android:id="@+id/username" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <TextView android:id="@+id/contactID"
+        android:layout_width="fill_parent"
+        android:text="Password"
+        android:layout_height="wrap_content"/>
+    <EditText android:id="@+id/password" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <Button android:text="Submit" android:id="@+id/Submit" android:layout_width="match_parent" android:layout_height="wrap_content" />
 
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Username" android:layout_gravity="center_vertical"></TextView>
-    <EditText android:layout_width="match_parent" android:layout_height="wrap_content" />
-    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Password"></TextView>
-    <EditText android:layout_width="match_parent" android:layout_height="wrap_content" />
-    <Button android:id="@+id/submit" android:layout_height="wrap_content" android:layout_width="match_parent" android:text="Submit" />
-
-
+    <TextView android:gravity="center_horizontal" android:layout_width="match_parent"  android:layout_height="wrap_content" android:text="or"
+        android:id="@+id/editText"  />
+    <Button android:text="Signup" android:layout_width="match_parent" android:layout_height="wrap_content" />
 </LinearLayout>
