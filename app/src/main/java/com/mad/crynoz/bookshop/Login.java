@@ -25,38 +25,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-//        Button submit = (Button) findViewById(R.id.submit);
-//
-//        submit.setOnClickListener(this);
-//        NotificationCompat.Builder mb = new NotificationCompat.Builder(this);
-//        mb.setContentTitle("Content");
-//        mb.setContentText("Some more content");
-//        Intent result = new Intent(this, DashBoard.class);
-//        TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-//        stackBuilder.addParentStack(DashBoard.class);
-//        stackBuilder.addNextIntent(result);
-//        PendingIntent pi = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
-//        mb.setContentIntent(pi);
-//        NotificationManager nm = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
-//        nm.notify(0, mb.build());
+        Intent i = new Intent(this, HomeCustomer.class);
+        startActivity(i);
 
-//        Uri allContacts = Uri.parse("content://contacts/people");
-//        Cursor c;
-//        CursorLoader cursorLoader = new CursorLoader(this, allContacts, null, null, null, null);
-//        c = cursorLoader.loadInBackground();
-//        String[] columns = new String[]{
-//                ContactsContract.Contacts.DISPLAY_NAME,
-//                ContactsContract.Contacts._ID
-//        };
-//        int[] views = new int[]{
-//                R.id.contactName,
-//                R.id.contactID
-//        };
-//        SimpleCursorAdapter adapter = new SimpleCursorAdapter(
-//                this, R.layout.activity_login, c, columns, views, CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER
-//        );
-//        ListView l = (ListView) findViewById(R.id.android_list);
-//        l.setAdapter(adapter);
     }
 
     @Override
