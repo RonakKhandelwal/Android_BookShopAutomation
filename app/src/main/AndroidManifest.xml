@@ -8,8 +8,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value=".SearchActivity" />
 
-        <meta-data android:name="android.app.default_searchable" android:value=".SearchActivity" />
         <activity android:name=".Login">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,16 +22,23 @@
         <activity android:name=".DashBoard" />
         <activity android:name=".Info" />
         <activity android:name=".Signup" />
-        <activity android:name=".HomeCustomer" >
-        </activity>
-        <activity android:name=".SearchActivity"
+        <activity android:name=".HomeCustomer" />
+        <activity
+            android:name=".SearchActivity"
             android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.SEARCH" />
             </intent-filter>
-            <meta-data android:name="android.app.searchable"
-                android:resource="@xml/searchable"/>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
         </activity>
+        <activity android:name=".HomeManager" />
+        <activity android:name=".HomeEmployee" />
+        <activity android:name=".RequestBooks" />
+        <activity android:name=".ViewRequests" />
+        <activity android:name=".BrowseBooks"></activity>
     </application>
 
 </manifest>

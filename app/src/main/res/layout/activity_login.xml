@@ -21,5 +21,5 @@
 
     <TextView android:gravity="center_horizontal" android:layout_width="match_parent"  android:layout_height="wrap_content" android:text="or"
         android:id="@+id/editText"  />
-    <Button android:text="Signup" android:layout_width="match_parent" android:layout_height="wrap_content" />
+    <Button android:text="Signup" android:id="@+id/signup" android:layout_width="match_parent" android:layout_height="wrap_content" />
 </LinearLayout>

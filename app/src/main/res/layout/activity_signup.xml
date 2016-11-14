@@ -27,6 +27,6 @@
         <RadioButton android:id="@+id/clerk" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Employee" />
         </RadioGroup>
     
-    <Button android:layout_margin="50dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Submit" android:gravity="center" />
+    <Button android:layout_margin="50dp" android:layout_width="match_parent" android:id="@+id/submit" android:layout_height="wrap_content" android:text="Submit" android:gravity="center" />
 
 </LinearLayout>

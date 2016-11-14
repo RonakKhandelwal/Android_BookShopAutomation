@@ -16,7 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1.0"
-            android:text="Request a new Book" />
+            android:text="Check Requests" />
 
         <Button
             android:id="@+id/button2"
@@ -38,8 +38,14 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1.0"
-            android:text="View Requested books" />
+            android:text="Check Registration requests" />
 
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:text="Check Orders" />
 
     </LinearLayout>
 </LinearLayout>
