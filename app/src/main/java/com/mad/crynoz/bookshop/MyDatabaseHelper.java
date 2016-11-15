@@ -128,6 +128,24 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+    public boolean deleteRequest(String name)
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.delete(TABLE_BOOK_REQUEST, KEY_BNAME + " = '" + name + "'", null) > 0;
+    }
+
+    public boolean deleteOrder(String name)
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.delete(TABLE_ORDERS, KEY_BNAME + " = '" + name + "'", null) > 0;
+    }
+
+    public boolean deleteSignup(String name)
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        return db.delete(TABLE_SIGNUP, KEY_USERNAME + " = '" + name + "'", null) > 0;
+    }
+
     public List<BooksR> getAllBooks(){
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -221,7 +239,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
 
         List<OrdersR> books = new ArrayList<>();
-        String selectQuery = "SELECT  * FROM " + TABLE_BOOK_REQUEST;
+        String selectQuery = "SELECT  * FROM " + TABLE_ORDERS;
 
         Log.e("DB", selectQuery);
 

@@ -15,27 +15,32 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
     private static String TAG = "Signup";
     @Override
     public void onClick(View v) {
-        Log.d(TAG, "onClick: Started or clicked");
         String user = username.getText().toString();
         String pass = password.getText().toString();
+        RadioButton cus = (RadioButton)findViewById(R.id.customer);
+        RadioButton man = (RadioButton)findViewById(R.id.manager);
+        RadioButton emp = (RadioButton)findViewById(R.id.clerk);
 
-        Log.d(TAG, "onClick: IDhar");
-        LoginR login = new LoginR(user, pass, "cus");
-        MyDatabaseHelper db = new MyDatabaseHelper(this);
-        long l = db.addLogin(login);
-        Log.d(TAG, "onClick: " + l);
-        if(l != -1)
-        {
-            Intent i = new Intent(this, HomeCustomer.class);
-            startActivity(i);
+        MyDatabaseHelper db = new MyDatabaseHelper(this.getApplicationContext());
+        if(man.isChecked()){
+            SignupR signupR = new SignupR(1, user, pass, "man");
+            Toast.makeText(this.getApplicationContext(), "You Will be notified shortly", Toast.LENGTH_LONG);
+            db.addSignup(signupR);
+            finish();
+        }
+        else if(emp.isChecked()){
+            SignupR signupR = new SignupR(1, user, pass, "man");
+            Toast.makeText(this.getApplicationContext(), "You Will be notified shortly", Toast.LENGTH_LONG);
+            db.addSignup(signupR);
+            finish();
         }
         else{
-            Log.d(TAG, "onClick: Could not insert");
-            Toast.makeText(getApplicationContext(), "Some Random Error Occured", Toast.LENGTH_LONG);
+            LoginR login = new LoginR(user, pass, "cus");
+            Log.d(TAG, "onClick: THis part called");
+            db.addLogin(login);
+            Intent i = new Intent(this.getApplicationContext(), HomeCustomer.class);
+            startActivity(i);
         }
-
-
-
     }
 
     Button submit;

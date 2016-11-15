@@ -27,6 +27,7 @@ public class HomeCustomer extends AppCompatActivity implements View.OnClickListe
         }
         else if(v == viewRequest) {
             Intent i = new Intent(this, ViewRequests.class);
+            i.putExtra("type", "cus");
             startActivity(i);
         }
         else if(v == viewAll) {

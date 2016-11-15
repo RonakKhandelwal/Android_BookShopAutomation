@@ -38,7 +38,9 @@
         <activity android:name=".HomeEmployee" />
         <activity android:name=".RequestBooks" />
         <activity android:name=".ViewRequests" />
-        <activity android:name=".BrowseBooks"></activity>
+        <activity android:name=".BrowseBooks" />
+        <activity android:name=".BrowseOrders" />
+        <activity android:name=".ViewSignups"></activity>
     </application>
 
 </manifest>

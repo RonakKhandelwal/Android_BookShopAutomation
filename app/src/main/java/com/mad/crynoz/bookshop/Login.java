@@ -42,7 +42,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                     cls = HomeManager.class;
                 }
                 else if(login.type.equals("emp")){
-                    cls = HomeEmployee.class;
+                    cls = HomeManager.class;
                 }
                 Intent i = new Intent(this.getApplicationContext(), cls);
                 i.putExtra("username", user);
