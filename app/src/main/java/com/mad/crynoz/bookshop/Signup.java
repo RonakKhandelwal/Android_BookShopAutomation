@@ -29,7 +29,7 @@ public class Signup extends AppCompatActivity implements View.OnClickListener {
             finish();
         }
         else if(emp.isChecked()){
-            SignupR signupR = new SignupR(1, user, pass, "man");
+            SignupR signupR = new SignupR(1, user, pass, "emp");
             Toast.makeText(this.getApplicationContext(), "You Will be notified shortly", Toast.LENGTH_LONG);
             db.addSignup(signupR);
             finish();

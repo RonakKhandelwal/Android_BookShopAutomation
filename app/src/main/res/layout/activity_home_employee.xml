@@ -40,12 +40,6 @@
             android:layout_weight="1.0"
             android:text="View Requested books" />
 
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1.0"
-            android:text="Check Customer Info" />
 
     </LinearLayout>
 </LinearLayout>
